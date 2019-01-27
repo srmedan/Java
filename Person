@@ -1,0 +1,61 @@
+
+public class ClassesAndObjects {
+	public static void main(String[] args) {
+		
+	
+		Person john = new Person("John");
+		john.setAge(20);
+		
+		
+		Person bob = new Person("Bob");
+		bob.setAge(25);
+		
+		john.sayHelloTo(bob);
+		bob.sayHelloTo(john);
+		
+		System.out.println(john.getName() + " is " + john.getAge());
+		System.out.println(bob.getName() + " is " + bob.getAge());
+		
+		
+
+		
+	}
+}
+
+
+--------------------------
+
+
+public class Person {
+	String name; //instance variable
+	int age;
+	
+	public Person(String name) {
+		this.name = name;
+		System.out.println("Person created");
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void sayHelloTo(Person person) {
+		System.out.println(getName() + " said hello to " + person.getName());
+		
+	}
+	
+	
+	
+}
